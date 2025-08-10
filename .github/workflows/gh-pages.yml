@@ -24,6 +24,9 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -32,6 +35,9 @@ jobs:
 
       - name: Build
         run: hugo --minify
+
+      - name: Add CNAME
+        run: echo www.kinako.dev > ./public/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
