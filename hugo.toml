@@ -1,0 +1,36 @@
+baseURL = "https://www.kinako.dev/"
+title = "kinako's Blog"
+theme = "PaperMod"
+languageCode = "en"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  author = "kinako"
+  description = "Just a portfolio"
+  mainSections = []           
+  disableSpecial1stPost = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
